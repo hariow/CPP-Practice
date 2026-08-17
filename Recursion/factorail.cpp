@@ -1,17 +1,14 @@
 #include<iostream>
 using namespace std;
 
-void print(int x,int n){
-    if (x>n) return;
-    cout<<x<<endl;
-    print(x+1,n);
+int fact(int n){
+    if(n==1 || n==0) return 1;
+    return n*fact(n-1);
 }
+
 int main(){
     int n;
     cout<<"Enter a number: ";
     cin>>n;
-    print(1,n);
+    cout<<fact(n);
 }
-
-
-
